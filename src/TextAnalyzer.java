@@ -158,6 +158,7 @@ public class TextAnalyzer extends Application {
 		loadB.setOnAction(e -> {
 			outputTA.clear();
 			mySQLSelect(outputTA, WWC.getWordCount(), fileList.getSelectionModel().getSelectedItem());
+			WWC.setWordCount(SortedWordCount(WWC.getWordCount()));
 			outputTA.setText(WordOccurancesIterator(WWC.getWordCount()));
 			});
 		
